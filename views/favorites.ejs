@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Favorites</h1>
+    <div class="row">
+      <% favorites.forEach(favorite => { %>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://icanhazdadjoke.com/j/<%= favorite.joke_id %>.png" class="card-img-top">
+            <div class="card-body">
+              <p><%= favorite.joke %></p>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>
+
